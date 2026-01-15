@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{985e036e-f157-4f34-a2d3-6355b432d642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="static">
+      <UniqueIdentifier>{b9824aaa-2e85-40a5-b693-908dc1939f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="templates">
+      <UniqueIdentifier>{6c9dd274-f4d0-4be6-a000-35e6f960bb25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="static\uploads">
+      <UniqueIdentifier>{72d2cb3e-c8c4-442c-b4ec-8b2f4343a0fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="static\uploads\alex">
+      <UniqueIdentifier>{cdda6fa4-d354-4092-99ed-e166beee9050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="static\uploads\ana">
+      <UniqueIdentifier>{da565391-e478-4e4c-8e77-e2e8a1c723ae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Proiect_PSO_FINAL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTP_Server.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Response.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server_Engine.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Auth_Service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Post_Service.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HTTP_Server.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Response.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Server_Engine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth_Service.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Post_Service.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="static\alex.json">
+      <Filter>static</Filter>
+    </None>
+    <None Include="static\ana.json">
+      <Filter>static</Filter>
+    </None>
+    <None Include="static\login.html">
+      <Filter>static</Filter>
+    </None>
+    <None Include="static\insta.html">
+      <Filter>static</Filter>
+    </None>
+    <None Include="static\profile.html">
+      <Filter>static</Filter>
+    </None>
+    <None Include="static\users.json">
+      <Filter>static</Filter>
+    </None>
+    <None Include="static\index.css">
+      <Filter>static</Filter>
+    </None>
+    <None Include="login.html">
+      <Filter>static</Filter>
+    </None>
+    <None Include="404.html">
+      <Filter>static</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="vacanta.jpg">
+      <Filter>static\uploads\alex</Filter>
+    </Image>
+    <Image Include="poza_profil.jpg">
+      <Filter>static\uploads\ana</Filter>
+    </Image>
+    <Image Include="static\ana\pisica.jpg">
+      <Filter>static\uploads\ana</Filter>
+    </Image>
+    <Image Include="static\alex\poza.jpg">
+      <Filter>static\uploads\alex</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

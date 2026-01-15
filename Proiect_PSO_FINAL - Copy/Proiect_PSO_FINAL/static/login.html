@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram-C | Autentificare</title>
+    <link rel="stylesheet" href="/static/index.css" />
+</head>
+
+<body class="auth-body">
+    <main class="auth-wrap">
+        <div class="auth-card">
+            <div class="auth-brand">Instagram-C</div>
+
+            <h2 class="auth-title">Autentificare</h2>
+            <form class="auth-form" action="/verify" method="POST">
+                <label class="auth-label">Utilizator</label>
+                <input class="auth-input" type="text" name="username" required />
+
+                <label class="auth-label">Parolă</label>
+                <input class="auth-input" type="password" name="password" required />
+
+                <button class="auth-btn auth-btn-primary" type="submit">Intră</button>
+            </form>
+
+            <div class="auth-sep"><span>sau</span></div>
+
+            <h2 class="auth-title">Creează cont</h2>
+            <form class="auth-form" action="/signup" method="POST">
+                <label class="auth-label">User dorit</label>
+                <input class="auth-input" type="text" name="username" required />
+
+                <label class="auth-label">Parolă dorită</label>
+                <input class="auth-input" type="password" name="password"  required />
+
+                <button class="auth-btn auth-btn-secondary" type="submit">Creează cont</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

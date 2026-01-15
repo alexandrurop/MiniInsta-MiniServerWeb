@@ -1,0 +1,25 @@
+﻿{
+  "user_info": {
+    "full_name": "Ana Balta",
+    "bio": "Pasionat de programare C și PSO",
+    "followers": 150,
+    "following": 200
+  },
+  "posts": [
+    {
+      "image_path": "static/uploads/ana/pisica.jpg",
+      "description": "Pisica mea!",
+      "upload_date": "2023-10-25 14:30"
+    },
+    {
+      "image_path": "static/uploads/ana/poza_profil.jpg",
+      "description": "Asta am desenat eu!!",
+      "upload_date": "2023-10-26 09:15"
+    },
+    {
+      "image_path": "static/uploads/ana/post_1767879305_5144.jpg",
+      "description": "Steag",
+      "upload_date": "2026-01-08 15:35"
+    }
+  ]
+}
