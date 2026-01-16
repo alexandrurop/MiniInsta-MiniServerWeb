@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/index.css">
+    <title>Profilul Meu | InstaServer</title>
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --border-color: #dbdbdb;
+            --text-main: #262626;
+            --text-secondary: #8e8e8e;
+            --accent-color: #0095f6;
+            --danger-color: #ed4956;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+            .nav-bar a {
+                text-decoration: none;
+                color: var(--accent-color);
+                font-weight: 600;
+            }
+
+        .profile-container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .upload-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+            .upload-section h3 {
+                margin-top: 0;
+                font-size: 18px;
+            }
+
+        .upload-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .btn-post {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .post-card {
+            display: flex;
+            gap: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .post-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .post-meta {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .post-date {
+            color: var(--text-secondary);
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .post-desc {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .btn-delete {
+            background: none;
+            border: none;
+            color: var(--danger-color);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0;
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        @media (max-width: 600px) {
+            .post-card {
+                flex-direction: column;
+            }
+
+            .post-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="/insta">← Înapoi la Feed</a>
+    </nav>
+
+    <div class="profile-container">
+        <header class="profile-header">
+            <h1>Profilul Meu</h1>
+        </header>
+
+        <section class="upload-section">
+            <h3>Creează o postare</h3>
+            <form class="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="text" name="description" placeholder="Spune ceva despre această fotografie..." required>
+                <input type="file" name="fileToUpload" accept="image/*" required style="margin-bottom: 15px;">
+                <button type="submit" class="btn-post">Publică Postarea</button>
+            </form>
+        </section>
+
+        <div class="feed-divider" style="border-top: 1px solid var(--border-color); margin-bottom: 30px; position: relative; text-align: center;">
+            <span style="background: var(--bg-color); padding: 0 10px; position: relative; top: -11px; color: var(--text-secondary); font-size: 14px;">POSTĂRILE TALE</span>
+        </div>
+
+        {{MY_FEED}}
+    </div>
+</body>
+</html>

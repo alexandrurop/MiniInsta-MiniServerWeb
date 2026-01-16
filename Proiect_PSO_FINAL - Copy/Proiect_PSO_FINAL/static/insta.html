@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta-C | Feed</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <style>
+        :root {
+            --insta-bg: #fafafa;
+            --border: #dbdbdb;
+            --text-main: #262626;
+            --text-grey: #8e8e8e;
+        }
+
+        body {
+            background-color: var(--insta-bg);
+            margin: 0;
+            font-family: -apple-system, system-ui, sans-serif;
+        }
+
+        main {
+            max-width: 600px; 
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+
+        .insta-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .post-container {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-header {
+            padding: 12px 16px;
+            font-weight: 600;
+            border-bottom: 1px solid #f8f8f8;
+        }
+
+        .post-main-img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh; 
+            display: block;
+            object-fit: contain; 
+        }
+
+        .post-content-area {
+            padding: 12px 16px;
+            border-top: 1px solid #f8f8f8;
+        }
+
+        .post-caption {
+            margin: 0 0 6px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+            .post-caption strong {
+                margin-right: 8px;
+            }
+
+        .post-timestamp {
+            font-size: 11px;
+            color: var(--text-grey);
+            text-transform: uppercase;
+        }
+
+        .post-container {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .post-image-wrapper {
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <style>
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            background: white;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="/insta" class="nav-logo">Instagram-C</a>
+        <div class="nav-links">
+            <a href="/profile">Profilul Meu</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="insta-grid">
+            {{FEED_CONTENT}}
+        </div>
+    </main>
+</body>
+</html>
+</html>
